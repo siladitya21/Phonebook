@@ -1,0 +1,14 @@
+<div>
+    <form [formGroup]="contactForm" autocomplete="off">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Your name.." formControlName="name">
+  
+      <label for="mobile">Mobile</label>
+      <input type="text" id="mobile" name="mobile" placeholder="Your mobile.." formControlName="mobile">
+  
+   
+    
+      <input type="submit" value={{btn_text}} (click)="submit()">
+    </form>
+  </div>
+  

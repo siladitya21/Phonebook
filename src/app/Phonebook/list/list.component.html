@@ -1,0 +1,23 @@
+<div style="overflow-x:auto;">
+    <table>
+      <tr>
+        <th>Sl</th>
+        <th>Name</th>
+        <th>Mobile</th>
+        <th>Actions</th>
+       
+      </tr>
+      <tr *ngFor="let con of contactList;let i = index">
+        <td>{{i+1}}</td>
+        <td>{{ con.name }}</td>
+        <td>{{ con.mobile }}</td>
+        <td><button class="button edit" [routerLink]="['/add-edit',con._id]">EDIT</button>
+            <button class="button delete" (click)="delete(con)">DELETE</button></td>
+        
+      
+      </tr>
+     
+    </table>
+  </div>
+  
+  <button class="button add" [routerLink]="['/add-edit']">+</button>
